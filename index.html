@@ -1,0 +1,52 @@
+<!-- 20 minutes done -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Budget Tracker</h1>
+        <div class="budget-container">
+            <div class="option">
+                <p>Income</p>
+                <span>$3.200</span>
+            </div>
+            <div class="option">
+                <p>Expense</p>
+                <span>$1.900</span>
+            </div>
+            <div class="option">
+                <p>Balance</p>
+                <span>$1.300</span>
+            </div>
+        </div>
+        <div class="data-info-graph">
+
+        </div>
+        <div class="options-container">
+            <div class="new-operation">
+                <h3>Add New Transaction</h3>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="negative/positive transaction">
+                <button>Add Transaction</button>
+            </div>
+            <div class="transaction-history">
+                <h3>Transaction History</h3>
+                <div class="transaction-history-list">
+                    <div class="element">
+                        <p class="element-name">Rent</p>
+                        <p class="element-price">-$1.200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
