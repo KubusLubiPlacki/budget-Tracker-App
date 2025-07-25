@@ -1,3 +1,4 @@
+<!-- 21:27 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <title>Budget Tracker App</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -17,7 +19,7 @@
             </div>
             <div class="option">
                 <p>Expense</p>
-                <span>$0</span>
+                <span class="expenses">$0</span>
             </div>
             <div class="option">
                 <p>Balance</p>
@@ -25,7 +27,7 @@
             </div>
         </div>
         <div class="data-info-graph">
-
+            <canvas id="myChart"></canvas>
         </div>
         <div class="options-container">
             <div class="new-operation">
