@@ -32,9 +32,11 @@
             <div class="new-operation">
                 <h3>Add New Transaction</h3>
                 <label for="name-transaction">Name</label>
-                <input type="text" id="name-transaction">
+                <input type="text" id="name-transaction" placeholder="name transaction">
+                <span style="color: #FA8C71; display: none;" id="spanName">Incorrect name</span>
                 <label for="amount">Amount</label>
-                <input type="number" pattern="-?[0-9]+" id="amount" placeholder="negative/positive transaction">
+                <input type="text" inputmode="decimal" pattern="^-?\d*\.?\d*$" id="amount" placeholder="negative/positive transaction"> <!-- repair input on mobile devices (cant write - minus!)-->
+                <span style="color: #FA8C71; display: none;" id="spanAmount">Incorrect amount</span>
                 <button>Add Transaction</button>
             </div>
             <div class="transaction-history">

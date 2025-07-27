@@ -13,6 +13,9 @@ let price=0
 let expenses=0;
 let balance=0;
 
+const spanName=document.getElementById("spanName");
+const spanAmount=document.getElementById("spanAmount");
+
 const myChart=new Chart(ctx, {
     type: "bar",
     data: {
@@ -83,8 +86,37 @@ function createExpense(name,price){
 }
 
 btn.addEventListener("click",()=>{
-    updateData(amount.value);
-    createExpense(nameTransaction.value,amount.value);
-    amount.value="";
-    nameTransaction.value=""
+    let arg1=false;
+    let arg2=false;
+    if(nameTransaction.value==""){
+        nameTransaction.style.border="3px solid #FA8C71";
+        spanName.style.display="block";
+        arg2=false;
+    }
+    else{
+        spanName.style.display="none";
+        arg2=true;
+        nameTransaction.style.border="1px solid rgba(0, 0, 0, 0.1)";
+    }
+    
+    
+    if(amount.value=="" || isNaN(amount.value)){
+        amount.style.border="3px solid #FA8C71";
+        spanAmount.style.display="block"
+        arg1=false;
+    }
+    else{
+        spanAmount.style.display="none";
+        arg1=true;
+        amount.style.border="1px solid rgba(0, 0, 0, 0.1)";
+    }
+
+    if(arg1 && arg2){
+        console.log("tak")
+        updateData(amount.value);
+        createExpense(nameTransaction.value,amount.value);
+        amount.value="";
+        nameTransaction.value="";
+    }
+    
 })
