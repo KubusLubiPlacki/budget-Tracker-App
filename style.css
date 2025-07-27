@@ -13,6 +13,7 @@
 }
 body{
     background-color: var(--back);
+    height: 100vh;
 }
 .wrapper{
     flex-direction: column;
@@ -20,7 +21,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+   
 }
 .wrapper h1{
     font-size: 4.5rem;
@@ -65,7 +66,7 @@ body{
     margin-top: 1.7rem;
     border-radius: 10px;
     min-width: 30rem;
-    min-height: 24rem;
+    max-height: 25rem;
 }
 .new-operation h3{
     padding: 1.3rem 0 1.3rem 0;
@@ -105,6 +106,10 @@ body{
     border-radius: 10px;
     min-width: 30rem;
     margin-top: 1.7rem;
+    max-height: 25rem;
+}
+.transaction-history-list{
+    overflow-y: auto;
 }
 .transaction-history h3{
     font-size: 1.8rem;
@@ -117,6 +122,7 @@ body{
     justify-content: space-between;
     font-size: 1.5rem;
     padding: .5rem 0rem .5rem 0rem;
+    animation: fadeIn .5s forwards;
 }
 .element-price-plus{
     color: var(--green);
@@ -124,4 +130,53 @@ body{
 }
 .element-price-minus{
     color: var(--red);
+}
+.data-info-graph{
+    width: 700px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:96rem){
+    html{
+        font-size: 72.25%;
+    }
+}
+@media (max-width:80rem){
+    html{
+        font-size: 65.25%;
+    }
+}
+@media (max-width:64rem){
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width:45rem){
+    html{
+        font-size: 45%
+    }
+    .data-info-graph{
+        width: 500px;
+        height: 250px;
+}
+    
+}
+@media (max-width:36rem){
+    html{
+        font-size: 32%;
+    }
+    .data-info-graph{
+        width: 330px;
+        height: 200px;
+}
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
